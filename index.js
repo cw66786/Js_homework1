@@ -464,6 +464,29 @@ console.log("25:",longestCountry(["Australia", "Germany", "United States of Amer
 
 // 26. Write a JavaScript function to find longest substring in a given a string without repeating characters.
 
+const longestSubstring = (str)=> {
+  let letters = [...str];
+  let max = 0;
+  let result = [];
+
+  for (let i = 0; i < letters.length; i++) {
+      let start = i;
+
+      if (result.indexOf(letters[i]) === -1) {
+          result.push(letters[i])
+      } else {
+          i = i - 1
+          result = []
+      }
+      if (max === 0 || max < result.length) {
+          max = result.length
+      }
+  }
+  return {substring: result.join(""),length: max};
+}
+
+console.log("26:",longestSubstring("thequickbrownfoxjumpsoverthelazydog"))
+
 // 27. Write a JavaScript function that returns the longest palindrome in a given string.
 // Note: According to Wikipedia "In computer science, the longest palindromic substring or longest symmetric factor problem is the problem of finding a maximum-length contiguous substring of a given string that is also a palindrome. For example, the longest palindromic substring of "bananas" is "anana". The longest palindromic substring is not guaranteed to be unique; for example, in the string "abracadabra", there is no palindromic substring with length greater than three, but there are two palindromic substrings with length three, namely, "aca" and "ada".
 // In some applications it may be necessary to return all maximal palindromic substrings (that is, all substrings that are themselves palindromes and cannot be extended to larger palindromic substrings) rather than returning only one substring or returning the maximum length of a palindromic substring.
