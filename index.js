@@ -307,6 +307,29 @@ console.log("17:",getLetterCount("T","thequickbrownfoxjumpsoverthelazydog"));
 // 18. Write a function for searching JavaScript arrays with a binary search.
 // Note: A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
 
+const binarySearch = (arr, item)=>{
+  let firstIndex  = 0,
+      lastIndex   = arr.length - 1,
+      middleIndex = Math.floor((lastIndex + firstIndex)/2);
+
+  while(arr[middleIndex] != item && firstIndex < lastIndex)
+  {
+     if (item < arr[middleIndex])
+      {
+          lastIndex = middleIndex - 1;
+      } 
+    else if (item > arr[middleIndex])
+      {
+          firstIndex = middleIndex + 1;
+      }
+      middleIndex = Math.floor((lastIndex + firstIndex)/2);
+  }
+
+return (arr[middleIndex] != item) ? "not found" : "at index " +middleIndex;
+}
+
+console.log("18:",binarySearch([1, 2, 3, 4, 5, 7, 8, 9],7))
+
 // 19. Write a JavaScript function that returns array elements larger than a number.
 
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters.
