@@ -265,6 +265,12 @@ const amountTocoins = (num, arr) => {
 console.log("14:",amountTocoins(46, [25, 10, 5, 2, 1]));
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result.
 
+const powerOf = (base,exponent)=>{
+  return Math.pow(base,exponent);
+}
+
+console.log("15:",powerOf(7,2))
+
 // 16. Write a JavaScript function to extract unique characters from a string.
 // Example string: "thequickbrownfoxjumpsoverthelazydog"
 // Expected Output: "thequickbrownfxjmpsvlazydg"
