@@ -177,12 +177,15 @@ const matrix = (num) => {
   for (row = 0; row < num; row++) {
     for (col = 0; col < num; col++) {
       if (row === col) {
-        console.log(1);
+        console.log(1)
+        document.write(1+" ");
       } else {
         console.log(0);
+        document.write(0+" ");
       }
     }
     console.log("-------");
+    document.write()
   }
   return 0;
 };
