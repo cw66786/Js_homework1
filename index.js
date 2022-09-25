@@ -291,6 +291,19 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
+const getLetterCount = (letter,str)=>{
+  let count = 0;
+
+  for(let i = 0; i<str.length;i++){
+    if(str[i].toLowerCase() === letter.toLowerCase()){
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("17:",getLetterCount("T","thequickbrownfoxjumpsoverthelazydog"));
+
 // 18. Write a function for searching JavaScript arrays with a binary search.
 // Note: A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
 
