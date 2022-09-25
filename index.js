@@ -254,24 +254,24 @@ const amountToCoins = () => {
   let coins = [];
 
   while (amount > 0) {
-    switch (amount) {
-      case (amount >= 25):
+    
+      if(amount >= 25){
         amount - 25;
         coins.push(25);
-      
-      case (amount < 25 && amount >= 10):
+      }
+      if(amount < 25 && amount >= 10){
         amount -10;
         coins.push(10);
-      
-      case (amount < 10 && amount >= 5):
+      }
+      if(amount < 10 && amount >= 5){
         amount - 5;
         coins.push(5);
-      
-      case (amount < 5 && amount >= 1):
+      }
+      if(amount < 5 && amount >= 1){
         amount - 1;
         coins.push(1);
-      
-    }
+      }
+    
   }
 
   return coins;
