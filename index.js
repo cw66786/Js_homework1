@@ -292,16 +292,15 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
 const countOccurences = (str)=> {
-  let sorted = str.split("").sort().join("");
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (sorted[i] == str[i + 1]) {
-      count++;
-    } else {
-      console.log(sorted[i] + " " + count);
-      count = 0;
-    }
-  }
+  return str.split("").reduce(
+    (acc, el) => {
+      if(acc.hasOwnProperty(el))
+        acc[el]++;
+      else
+        acc[el] = 1;
+      return acc;
+    }, {}
+  )
 }
 
 console.log("17:",countOccurences("thequickbrown"))
