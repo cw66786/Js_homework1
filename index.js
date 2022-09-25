@@ -332,6 +332,18 @@ console.log("18:",binarySearch([1, 2, 3, 4, 5, 7, 8, 9],7))
 
 // 19. Write a JavaScript function that returns array elements larger than a number.
 
+const isLarger = (arr,num) =>{
+  let results = [];
+  for(let i =0;i<arr.length;i++){
+    if(arr[i]> num){
+      results.push(arr[i]);
+    }
+  }
+  return results;
+}
+
+console.log("19:",isLarger([1,2,3,4,5,6,7,8,9],5));
+
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters.
 // Sample character list: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
