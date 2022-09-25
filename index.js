@@ -246,8 +246,10 @@ console.log("12:",perfectCheck(perfectEx));
 
 // 13. Write a JavaScript function to compute the factors of a positive integer. 
 
-const getFactors= () =>{
-  let num = 6;
+let factorEx = 6;
+
+const getFactors= (num) =>{
+  
   let factors = [];
   for(let i = 1;i<=(num/2);i++){
     if(num % i === 0){
@@ -257,7 +259,7 @@ const getFactors= () =>{
   return factors;
 };
 
-console.log("13:",getFactors())
+console.log("13:",getFactors(factorEx))
 
 
 
@@ -265,6 +267,38 @@ console.log("13:",getFactors())
 // Sample function: amountTocoins(46, [25, 10, 5, 2, 1])
 // Here 46 is the amount. and 25, 10, 5, 2, 1 are coins. 
 // Output: 25, 10, 10, 1
+
+let coinEx = 46;
+
+const amountToCoins = ()=>{
+  let amount = 46;
+  let coins =[];
+
+while(amount > 0){
+
+  switch(amount){
+
+    case amount >= 25:
+      amount -= 25;
+      coins.push(25);
+
+    case amount < 25 && amount >= 10:
+      amount -= 10;
+      coins.push(10);
+
+    case amount < 10 && amount >= 5:
+        amount -= 5;
+        coins.push(5);
+
+    case amount < 5 && amount >= 1:
+          amount -= 1;
+          coins.push(1);
+
+  }
+}
+};
+
+console.log("14:",amountToCoins())
 
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result. 
 
