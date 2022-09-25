@@ -540,3 +540,11 @@ console.log("28:",thirdNumber(1,twoNum(1,1)))
 
 
 // 29. Write a JavaScript function to get the function name.
+
+const getFunctionName = function(){
+console.log("29:",arguments.callee.name);
+
+}
+
+getFunctionName();
+
