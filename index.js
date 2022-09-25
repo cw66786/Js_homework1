@@ -281,7 +281,7 @@ const exractUnique = (str)=>{
 
   for(let i =0;i<str.length;i++){
     if(uniqueStr.indexOf(str[i]) === -1){
-      uniqueStr + str[i]
+      uniqueStr += str[i]
     }
   }
   return uniqueStr;
