@@ -178,14 +178,14 @@ const matrix = (num) => {
     for (col = 0; col < num; col++) {
       if (row === col) {
         console.log(1)
-        document.write(1+" ");
+        document.write(1 + " ");
       } else {
         console.log(0);
-        document.write(0+" ");
+        document.write(0 +" ");
       }
     }
     console.log("-------");
-    document.write()
+    document.write("/n"+"<br>");
   }
   return 0;
 };
