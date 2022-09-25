@@ -294,13 +294,13 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 const countOccurences = (str)=> {
   return [...str].reduce(
     (acc, el) => {
-      if(acc.hasOwnProperty(el))
+      if(acc.hasOwnProperty(el)){
         acc[el]++;
-      else
+      }else{
         acc[el] = 1;
       return acc;
-    }, {}
-  )
+    }
+  }, {})
 }
 
 console.log("17:",countOccurences("thequickbrown"))
@@ -429,6 +429,21 @@ console.log("23:",firstNonRepeat('abacddbec'))
 // 25. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
 // Sample function: Longest_Country_Name(["Australia", "Germany", "United States of America"])
 // Expected output: "United States of America"
+
+const longestCountry = (arr)=>{
+
+  return arr.reduce(
+    (acc, el) => {
+      if(acc.length < el.length){
+        acc = el;
+      }
+       
+      return acc;
+    })
+
+}
+
+console.log("25:",longestCountry(["Australia", "Germany", "United States of America"]))
 
 // 26. Write a JavaScript function to find longest substring in a given a string without repeating characters.
 
