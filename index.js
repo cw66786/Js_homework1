@@ -275,19 +275,19 @@ console.log("15:",powerOf(7,2))
 // Example string: "thequickbrownfoxjumpsoverthelazydog"
 // Expected Output: "thequickbrownfxjmpsvlazydg"
 
-const exractUnique= ()=>{
-  let str = "thequickbrownfoxjumpsoverthelazydog";
+const exractUnique = (str)=>{
+  
   let uniqueStr = "";
 
   for(let i =0;i<str.length;i++){
     if(uniqueStr.indexOf(str[i]) === -1){
-      uniqueStr.concat(str[i]);
+      uniqueStr + str[i]
     }
   }
   return uniqueStr;
 }
 
-console.log("16:",exractUnique());
+console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
