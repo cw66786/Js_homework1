@@ -426,6 +426,22 @@ console.log("23:",firstNonRepeat('abacddbec'))
 // Sample array: [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
 // Expected output: [3223, 546, 455, 345, 234, 213, 122, 98, 84, 64, 23, 12, 9, 4, 1]
 
+let bubbleEx = [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
+
+const bubbleSort = (arr)=>{
+  for(let i = 0;i<arr.length;i++){
+    for(let j =0;j<arr.length-1;j++){
+      if(arr[j]>arr[j+1]){
+        arr[j] = arr[j+1];
+        arr[j+1] = arr[j];
+      }
+    }
+
+  }
+  return arr;
+}
+console.log("24:",bubbleSort(bubbleEx))
+
 // 25. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
 // Sample function: Longest_Country_Name(["Australia", "Germany", "United States of America"])
 // Expected output: "United States of America"
