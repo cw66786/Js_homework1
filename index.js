@@ -185,7 +185,7 @@ const matrix = (num) => {
       }
     }
     console.log("-------");
-    document.write("/n"+"<br>");
+    document.write("<br>");
   }
   return 0;
 };
