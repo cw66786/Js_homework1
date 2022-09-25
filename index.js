@@ -292,7 +292,7 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
 const countOccurences = (str)=> {
-  return str.split("").reduce(
+  return [...str].reduce(
     (acc, el) => {
       if(acc.hasOwnProperty(el))
         acc[el]++;
@@ -392,6 +392,34 @@ console.log("22:",getLetterCount('microsoft.com', 'o'));
 // 23. Write a JavaScript function to find the first not repeated character.
 // Sample arguments: 'abacddbec'
 // Expected output: 'e'
+
+const firstNonRepeat = (str)=>{
+  let count = 0;
+let result = "";
+
+  for(let i=0;i<str.length;i++){
+    if(count === 1){
+      result += str[i-1];
+      break;
+      
+    }else{
+      count = 0;
+    }
+   
+    for(let j = 0;j<str.length;j++){
+      if(str[i] === str[j]){
+        count++;
+      }
+
+      
+
+      
+    }
+  }
+  return result;
+}
+
+console.log("23:",firstNonRepeat('abacddbec'))
 
 // 24. Write a JavaScript function to apply Bubble Sort algorithm.
 // Note: According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
