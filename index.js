@@ -526,4 +526,17 @@ console.log("26:",longestSubstring("thequickbrownfoxjumpsoverthelazydog"))
 
 // 28. Write a JavaScript program to pass a 'JavaScript function' as parameter.
 
+const twoNum= (a,b)=>{
+  return a+b;
+}
+
+const thirdNumber = (num,paramFunc)=> {
+  return num + paramFunc;
+ 
+}
+
+console.log("28:",thirdNumber(1,twoNum(1,1)))
+
+
+
 // 29. Write a JavaScript function to get the function name.
