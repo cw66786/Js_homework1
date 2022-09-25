@@ -248,38 +248,21 @@ console.log("13:", getFactors(factorEx));
 // Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
 // Output: 25, 10, 10, 1
 
-let coinEx = 46;
-
-const amountToCoins = () => {
-  let amount = 46;
-  let coins = [];
-
-  while (amount > 0) {
-    
-      if(amount >= 25){
-        amount - 25;
-        coins.push(25);
-      }
-      if(amount < 25 && amount >= 10){
-        amount -10;
-        coins.push(10);
-      }
-      if(amount < 10 && amount >= 5){
-        amount - 5;
-        coins.push(5);
-      }
-      if(amount < 5 && amount >= 1){
-        amount - 1;
-        coins.push(1);
-      }
-    
+const amountTocoins = (num, arr) => {
+  if (num <= 0){
+     return [];
   }
-
-  return coins;
+    if (num >= arr[0]) {
+      let newAmount = num - arr[0];
+      return [arr[0]].concat(amountTocoins(newAmount, arr));
+    } else {
+      arr.shift();
+      return amountTocoins(num, arr);
+    }
+  
 };
 
-console.log("14:", amountToCoins());
-
+console.log("14:",amountTocoins(46, [25, 10, 5, 2, 1]));
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result.
 
 // 16. Write a JavaScript function to extract unique characters from a string.
