@@ -291,6 +291,20 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
+const countOccurences = (str)=> {
+  let sorted = str.split("").sort().join("");
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (sorted[i] == str[i + 1]) {
+      count++;
+    } else {
+      console.log(sorted[i] + " " + count);
+      count = 0;
+    }
+  }
+}
+
+console.log("17:",countOccurences("thequickbrownfoxjumpsoverthelazydog"))
 
 
 // 18. Write a function for searching JavaScript arrays with a binary search.
