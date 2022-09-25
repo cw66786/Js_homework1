@@ -291,18 +291,7 @@ console.log("16:",exractUnique("thequickbrownfoxjumpsoverthelazydog"));
 
 // 17. Write a JavaScript function to get the number of occurrences of each letter in specified string.
 
-const getLetterCount = (letter,str)=>{
-  let count = 0;
 
-  for(let i = 0; i<str.length;i++){
-    if(str[i].toLowerCase() === letter.toLowerCase()){
-      count++;
-    }
-  }
-  return count;
-}
-
-console.log("17:",getLetterCount("T","thequickbrownfoxjumpsoverthelazydog"));
 
 // 18. Write a function for searching JavaScript arrays with a binary search.
 // Note: A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
@@ -368,9 +357,24 @@ console.log("20:",generateId(5));
 // Sample array: [1, 2, 3] and subset length is 2
 // Expected output: [[2, 1], [3, 1], [3, 2]]
 
+
+
 // 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
 // Sample arguments: 'microsoft.com', 'o'
 // Expected output: 3
+
+const getLetterCount = (str,letter)=>{
+  let count = 0;
+
+  for(let i = 0; i<str.length;i++){
+    if(str[i].toLowerCase() === letter.toLowerCase()){
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("22:",getLetterCount('microsoft.com', 'o'));
 
 // 23. Write a JavaScript function to find the first not repeated character.
 // Sample arguments: 'abacddbec'
