@@ -17,7 +17,7 @@ console.log("1: ", reverseNumber(reverseNumExample));
 
 let palindromeStr = "nurses run";
 
-const palidromeChecker = (str) => {
+const palindromeChecker = (str) => {
   if (typeof str !== "string") {
     return "Not a string";
   }
@@ -28,7 +28,7 @@ const palidromeChecker = (str) => {
   return lowerStr === revStr ? true : false;
 };
 
-console.log("2:", palidromeChecker(palindromeStr));
+console.log("2:", palindromeChecker(palindromeStr));
 
 // 3. Write a JavaScript function that generates all combinations of a string.
 // Example string: 'dog'
@@ -491,6 +491,38 @@ console.log("26:",longestSubstring("thequickbrownfoxjumpsoverthelazydog"))
 // 27. Write a JavaScript function that returns the longest palindrome in a given string.
 // Note: According to Wikipedia "In computer science, the longest palindromic substring or longest symmetric factor problem is the problem of finding a maximum-length contiguous substring of a given string that is also a palindrome. For example, the longest palindromic substring of "bananas" is "anana". The longest palindromic substring is not guaranteed to be unique; for example, in the string "abracadabra", there is no palindromic substring with length greater than three, but there are two palindromic substrings with length three, namely, "aca" and "ada".
 // In some applications it may be necessary to return all maximal palindromic substrings (that is, all substrings that are themselves palindromes and cannot be extended to larger palindromic substrings) rather than returning only one substring or returning the maximum length of a palindromic substring.
+
+
+  
+ const longestPalindrome = (str)=>{
+  
+  let maxLength = 0,
+  longest = '';
+  
+  for(let i=0; i < str.length; i++) 
+  {
+  let sub = str.substr(i, str.length);
+  
+  for(let j=sub.length; j>=0; j--) 
+  {
+  let subSub = sub.substr(0, j);
+  if (subSub.length <= 1)
+  continue;
+  
+  if (palindromeChecker(subSub))
+  {
+  if (subSub.length > maxLength) 
+  {
+  maxLength = subSub.length;
+  longest = subSub;
+  }
+  }
+  }
+  }
+  
+  return longest;
+  }
+  console.log("27:",longestPalindrome("abracadabra"));
 
 // 28. Write a JavaScript program to pass a 'JavaScript function' as parameter.
 
