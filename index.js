@@ -347,6 +347,23 @@ console.log("19:",isLarger([1,2,3,4,5,6,7,8,9],5));
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters.
 // Sample character list: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
+const generateId = (num)=>{
+  let char = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let id = "";
+  if(num === 0){
+    return "length must be greater then 0";
+  }
+  for(let i =0;i< num;i++){
+    id += char[Math.floor(Math.random()*char.length)];
+  }
+  return id;
+
+}
+
+console.log("20:",generateId(5));
+
+
+
 // 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.
 // Sample array: [1, 2, 3] and subset length is 2
 // Expected output: [[2, 1], [3, 1], [3, 2]]
