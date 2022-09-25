@@ -304,7 +304,7 @@ const countOccurences = (str)=> {
   }
 }
 
-console.log("17:",countOccurences("thequickbrownfoxjumpsoverthelazydog"))
+console.log("17:",countOccurences("thequickbrown"))
 
 
 // 18. Write a function for searching JavaScript arrays with a binary search.
