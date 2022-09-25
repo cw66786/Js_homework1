@@ -168,6 +168,7 @@ const typeCheck = (arg) => {
 console.log("9:", typeCheck(typeEx));
 
 // 10. Write a JavaScript function which returns the n rows by n columns identity matrix.
+console.log("10:")
 
 const matrix = (num) => {
   let row;
@@ -186,7 +187,7 @@ const matrix = (num) => {
   return 0;
 };
 matrix(3);
-console.log("10:", "see document");
+
 
 // 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
 // Sample array: [1,2,3,4,5]
